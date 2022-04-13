@@ -7,8 +7,8 @@ const ingredients = [
   'Condiments',
 ];
 const navItemEl = document.createElement('li');
-
-navItemEl.classList.add('item');
+/*navItemEl.forEach((ingredients) => )*/
+navItemEl.classList.add('ingredients');
 
 console.log(navItemEl);
 const navLinkEl = document.createElement('a');
@@ -21,3 +21,8 @@ console.log(navItemEl);
 
 const navEl = document.querySelector('#ingredients');
 navEl.appendChild(navItemEl);
+
+/*categoriesEl.forEach((category) => {
+  console.log(`Categorys: ${category.firstElementChild.textContent}`);
+  console.log(`Elements: ${category.lastElementChild.children.length}`);
+});*/

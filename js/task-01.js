@@ -4,4 +4,4 @@ const categoriesEl = document.querySelectorAll('li.item');
 categoriesEl.forEach((category) => {
     console.log(`Categorys: ${category.firstElementChild.textContent}`);
     console.log(`Elements: ${category.lastElementChild.children.length}`);
-})
+});

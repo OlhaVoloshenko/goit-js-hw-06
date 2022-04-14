@@ -22,3 +22,48 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+
+/* Загальні налаштування */
+a {text-decoration: none;}
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  }
+
+  /* Налаштування для 3 завдання */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -30px;
+  margin-left: -10px;
+
+}
+.img__nature {
+  width: 600px;
+  height: 350px;
+} 
+
+.list__item {
+  width: 354px;
+  height: 440px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  flex-basis: calc((100% - 60px) / 2);
+  
+}
+.list__item--text {
+  color: black;
+  font-size: 34px;
+  text-align:left;
+}
+/* class для 6 завдання */
+
+.valid {
+  border-color: #4caf50;
+}
+
+.invalid {
+  border-color: #f44336;
+} 

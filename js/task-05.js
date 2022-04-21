@@ -1,6 +1,11 @@
-const nameInput = document.querySelector("#name-input");
-const nameOutput = document.querySelector("#name-output");
+ const reactionText = {
+    input: document.querySelector('#name-input'),
+    nameLabel: document.querySelector('#name-output'),
+    }
+ 
+    reactionText.input.addEventListener('input', print);
+ 
+ function print (event) {
 
-nameInput.addEventListener('input', (print) => {
- nameOutput.textContent = print.currentTarget.value;
-});
+ event.currentTarget.value === '' ? reactionText.nameLabel.textContent = 'Anonymous' : reactionText.nameLabel.textContent = event.currentTarget.value;
+ };

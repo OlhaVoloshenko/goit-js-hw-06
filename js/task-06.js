@@ -8,7 +8,7 @@ check: inputEl.getAttribute('data-length'),
 
 refs.input.addEventListener('blur', print);
 
-function print (event) {
+function print(event) {
   
    if (event.currentTarget.value.length <= refs.check) {
       refs.input.classList.add('valid');  

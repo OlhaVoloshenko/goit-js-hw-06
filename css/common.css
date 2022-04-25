@@ -49,19 +49,10 @@ ul, ol {
   width: auto;
   margin-left: 10px;
   flex-basis: calc((100% - 60px) / 2);
-  
 }
+
 .gallery__item--text {
   color: black;
   font-size: 32px;
   text-align: left;
 }
-/* class для 6 завдання */
-
-.valid {
-  border-color: #4caf50;
-}
-
-.invalid {
-  border-color: #f44336;
-} 

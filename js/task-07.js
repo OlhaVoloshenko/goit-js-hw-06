@@ -1,10 +1,10 @@
-const refs = {
+const refunctions = {
     control: document.querySelector('#font-size-control'),
     text: document.querySelector('#text'),
  }
  
- refs.control.addEventListener('input', font);
+ refunctions.control.addEventListener('input', fonts);
  
- function font (event) {
-    refs.text.style.fontSize = event.currentTarget.value + "px";  
+ function fonts (event) {
+    refunctions.text.style.fontSize = event.currentTarget.value + "px";  
 };

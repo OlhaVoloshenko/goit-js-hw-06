@@ -1,46 +1,45 @@
-/*function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}*/
 const valueToInput = document.querySelector('input')
 const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const divsContainer = document.querySelector('#boxes');
 
 const getRandomHexColor = () => {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 };
 
-const onCreateCounterInValueInput = (value) => {
+const CreateCounterValue = (value) => {
   valueToInput.setAttribute('counter', value.currentTarget.value)
 };
 
-const onCreateBoxes = () => {
-  let startBoxSizing = 20;
+const CreateInBoxes = () => {
+  let firstBoxSizing = 30;
   let allDivsEl = [];
   for (let i = 1; i <= valueToInput.getAttribute('counter'); i += 1) {
     
-    startBoxSizing += 10;
-    const createdDiv = document.createElement('div');
+    firstBoxSizing += 10;
+    const creatDivs = document.createElement('div');
    
-    createdDiv.classList.add('box-item')
-    createdDiv.style.width = `${startBoxSizing}px`
-    createdDiv.style.height = `${startBoxSizing}px`
-    createdDiv.style.border = '2px solid black'
-    createdDiv.style.backgroundColor = `${getRandomHexColor()}`
-    createdDiv.style.marginTop = '10px'
-    createdDiv.style.verticalAlign = 'middle'
+    creatDivs.classList.add('box-item')
+    creatDivs.style.width = `${firstBoxSizing}px`
+    creatDivs.style.height = `${firstBoxSizing}px`
+    creatDivs.style.marginTop = '8px'
+    creatDivs.style.verticalAlign = 'middle'
+    creatDivs.style.backgroundColor = `${getRandomHexColor()}`
+    creatDivs.style.border = '2px solid black'
 
-  allDivsEl.push(createdDiv);
+  allDivsEl.push(creatDivs);
   }
   divsContainer.append(...allDivsEl)
 };
 
-const onDestroyBtn = () => {
+const DestroyOnBtn = () => {
   divsContainer.innerHTML = '';
   valueToInput.removeAttribute('counter');
   valueToInput.value = '';
 };
   
-valueToInput.addEventListener('input', onCreateCounterInValueInput);
-createBtn.addEventListener('click', onCreateBoxes);
-destroyBtn.addEventListener('click', onDestroyBtn);
+valueToInput.addEventListener('input', CreateCounterValue);
+createBtn.addEventListener('click', CreateInBoxes);
+destroyBtn.addEventListener('click', DestroyOnBtn);

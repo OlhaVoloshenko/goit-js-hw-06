@@ -1,7 +1,7 @@
-const butonEl = document.querySelector('.change-color'),
+const buttonEl = document.querySelector('.change-color'),
 textColorEl = document.querySelector('.color');
 
-butonEl.addEventListener("click", () => {
+buttonEl.addEventListener("click", () => {
   console.log("Button was clicked");
   document.body.style.backgroundColor = getRandomHexColor();
   textColorEl.textContent = getRandomHexColor();

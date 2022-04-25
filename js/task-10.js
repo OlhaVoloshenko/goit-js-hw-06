@@ -34,7 +34,7 @@ const CreateInBoxes = () => {
   divsContainer.append(...allDivsEl)
 };
 
-const DestroyOnBtn = () => {
+const DestroyBoxes = () => {
   divsContainer.innerHTML = '';
   valueToInput.removeAttribute('counter');
   valueToInput.value = '';
@@ -42,4 +42,4 @@ const DestroyOnBtn = () => {
   
 valueToInput.addEventListener('input', CreateCounterValue);
 createBtn.addEventListener('click', CreateInBoxes);
-destroyBtn.addEventListener('click', DestroyOnBtn);
+destroyBtn.addEventListener('click', DestroyBoxes);

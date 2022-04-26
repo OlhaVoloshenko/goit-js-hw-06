@@ -1,5 +1,5 @@
-const inputEl = document.querySelector('#validation-input'),
-checkInput = inputEl.getAttribute('data-length'); 
+const inputEl = document.querySelector('#validation-input');
+//const checkInput = inputEl.getAttribute('data-length'); 
 
 const refs = {
 input: inputEl,
@@ -11,9 +11,17 @@ refs.input.addEventListener('blur', print);
 function print(event) {
   
    if (event.currentTarget.value.length <= refs.check) {
-      refs.input.classList.add('valid');  
+      refs.input.classList.remove('invalid');
+      refs.input.classList.add('valid');
+      // refs.ClassList.remove;
+      
    }
    else {
-      refs.input.classList.add('invalid');  
+      refs.input.classList.remove('valid');
+      refs.input.classList.add('invalid');
+      
+      //refs.ClassList.remove;
    }
+  
 };
+

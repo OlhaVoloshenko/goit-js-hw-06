@@ -12,9 +12,10 @@ const getRandomHexColor = () => {
 const CreateCounterValue = (value) => {
   valueToInput.setAttribute('counter', value.currentTarget.value)
 };
+let firstBoxSizing = 30;
 
 const CreateInBoxes = () => {
-  let firstBoxSizing = 30;
+  
   let allDivsEl = [];
   for (let i = 1; i <= valueToInput.getAttribute('counter'); i += 1) {
     

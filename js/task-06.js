@@ -10,7 +10,7 @@ refs.input.addEventListener('blur', print);
 
 function print(event) {
   
-   if (event.currentTarget.value.length <= refs.check) {
+   if (event.currentTarget.value.length = refs.check) {
       refs.input.classList.remove('invalid');
       refs.input.classList.add('valid');
       // refs.ClassList.remove;
